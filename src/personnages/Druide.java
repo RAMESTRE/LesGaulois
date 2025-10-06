@@ -3,21 +3,24 @@ package personnages;
 public class Druide {
 	private String[] nom;
 	private int force;
-	
+	private Chaudron chaudron;
+
 	public void parler(String texte) {
 		System.out.println(prendreParole() + "\"" + texte + "\"");
 	}
-	
+
 	public String prendreParole() {
 		return "Le druide " + nom + " : ";
 	}
-	
-	public void booster(Gaulois gaulois) {}
-	
-	public void fabriquerPotion(int qte, int forcePotion) {
-		
+
+	public void booster(Gaulois gaulois) {
 	}
-	
+
+	public void fabriquerPotion(int qte, int forcePotion) {
+		chaudron.remplirChaudron(qte, forcePotion);
+		parler("J'ai concocté " + qte + " doses de potion magique. Elle a une force de " + forcePotion + ".");
+	}
+
 	public String[] getNom() {
 		return nom;
 	}

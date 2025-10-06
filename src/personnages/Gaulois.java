@@ -34,9 +34,9 @@ public class Gaulois {
 	}
 
 	public void boirePotion(int forcePotion) {
-		
+
 	}
-	
+
 	public static void main(String[] argv) {
 
 		Gaulois asterix;

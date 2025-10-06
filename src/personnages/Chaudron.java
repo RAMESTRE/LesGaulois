@@ -5,7 +5,8 @@ public class Chaudron {
 	private int forcePotion;
 
 	public void remplirChaudron(int qte, int forcePotion) {
-
+		this.qtePotion = qte;
+		this.forcePotion = forcePotion;
 	}
 
 	public boolean resterPotion() {
