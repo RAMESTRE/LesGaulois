@@ -22,8 +22,9 @@ public class Romain {
 	}
 
 	public void recevoirCoup(int forceCoup) {
-		// TODO Auto-generated method stub
-		
+		this.force -= forceCoup;
+		if (this.force < 1) parler("J'abandonne");
+		else parler("Aïe");
 	}
 
 }
