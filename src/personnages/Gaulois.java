@@ -18,8 +18,17 @@ public class Gaulois {
 	}
 
 	private String prendreParole() {
-		// TODO Auto-generated method stub
 		return "Le gaulois " + nom + " : " ;
+	}
+	
+	public static void main(String[] argv) {
+		
+		Gaulois asterix;
+		
+		asterix = new Gaulois("Astérix", 8);
+		
+		System.out.println(asterix);
+		
 	}
 	
 }
