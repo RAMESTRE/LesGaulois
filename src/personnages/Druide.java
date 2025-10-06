@@ -4,10 +4,12 @@ public class Druide {
 	private String[] nom;
 	private int force;
 	
-	public void parler(String texte) {}
+	public void parler(String texte) {
+		System.out.println(prendreParole() + "\"" + texte + "\"");
+	}
 	
 	public String prendreParole() {
-		return "";
+		return "Le druide " + nom + " : ";
 	}
 	
 	public void booster(Gaulois gaulois) {}
