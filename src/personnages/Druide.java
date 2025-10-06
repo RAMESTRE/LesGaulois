@@ -1,9 +1,15 @@
 package personnages;
 
 public class Druide {
-	private String[] nom;
+	private String nom;
 	private int force;
 	private Chaudron chaudron;
+
+	public Druide(String string, int force) {
+		this.nom = string;
+		this.force = force;
+		this.chaudron = new Chaudron();
+	}
 
 	public void parler(String texte) {
 		System.out.println(prendreParole() + "\"" + texte + "\"");
@@ -34,7 +40,7 @@ public class Druide {
 		parler("J'ai concocté " + qte + " doses de potion magique. Elle a une force de " + forcePotion + ".");
 	}
 
-	public String[] getNom() {
+	public String getNom() {
 		return nom;
 	}
 }
