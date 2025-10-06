@@ -23,8 +23,10 @@ public class Romain {
 
 	public void recevoirCoup(int forceCoup) {
 		this.force -= forceCoup;
-		if (this.force < 1) parler("J'abandonne");
-		else parler("Aïe");
+		if (this.force < 1)
+			parler("J'abandonne");
+		else
+			parler("Aïe");
 	}
 
 }
