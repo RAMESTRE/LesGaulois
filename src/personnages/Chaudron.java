@@ -16,6 +16,10 @@ public class Chaudron {
 	}
 
 	public int prendreLouche() {
-		return 0;
+		if (qtePotion > 0) {
+			qtePotion--;
+			return forcePotion;
+		} else
+			return 0;
 	}
 }

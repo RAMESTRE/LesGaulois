@@ -34,7 +34,7 @@ public class Gaulois {
 	}
 
 	public void boirePotion(int forcePotion) {
-
+		this.effetPotion = forcePotion;
 	}
 
 	public static void main(String[] argv) {
