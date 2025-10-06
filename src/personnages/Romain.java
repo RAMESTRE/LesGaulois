@@ -17,7 +17,7 @@ public class Romain {
 		System.out.println(prendreParole() + "\"" + text + "\"");
 	}
 
-	private String prendreParole() {
+	public String prendreParole() {
 		return "Le romain " + nom + " : ";
 	}
 

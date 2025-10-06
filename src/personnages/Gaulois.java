@@ -3,10 +3,12 @@ package personnages;
 public class Gaulois {
 	private String nom;
 	private int force;
+	private int effetPotion;
 
 	public Gaulois(String nom, int force) {
 		this.nom = nom;
 		this.force = force;
+		this.effetPotion = 1;
 	}
 
 	public String getNom() {
@@ -31,6 +33,10 @@ public class Gaulois {
 		romain.recevoirCoup(this.force / 3);
 	}
 
+	public void boirePotion(int forcePotion) {
+		
+	}
+	
 	public static void main(String[] argv) {
 
 		Gaulois asterix;
