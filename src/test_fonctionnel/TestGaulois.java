@@ -20,7 +20,7 @@ public class TestGaulois {
 		minus = new Romain("Minus", 6);
 		brutus = new Romain("Brutus", 14);
 		panoramix = new Druide("Panoramix", 2);
-
+		
 		asterix.parler("Bonjour Obélix");
 		obelix.parler("Bonjour Astérix? Ca te dirais d'aller chasser des sangliers ?");
 		asterix.parler("Oui très bonne idée.");
