@@ -25,7 +25,12 @@ public class Village {
 	}
 	
 	public Gaulois trouverVillageois(int numVillageois) {
-		return null;
+		if (numVillageois <= nbVillageois && numVillageois > 0 && villageois[numVillageois - 1] != null) {
+			return villageois[numVillageois - 1];
+		} else {
+			System.out.println("Il n'y a pas autant d'habitants dans notre village");
+			return null;
+		}
 	}
 	
 	public void afficherVillage() {
