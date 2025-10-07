@@ -29,4 +29,15 @@ public class Romain {
 			parler("Aïe");
 	}
 
+	private boolean isInvariantVerified() {
+		return this.force > 0;
+	}
+
+	public static void main(String[] argv) {
+
+		Romain minus = new Romain("Minus", 6);
+		assert minus.isInvariantVerified();
+
+	}
+
 }
