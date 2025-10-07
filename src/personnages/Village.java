@@ -19,8 +19,9 @@ public class Village {
 		return chef;
 	}
 	
-	public void ajouterVillageois() {
-		
+	public void ajouterVillageois(Gaulois gaulois) {
+		villageois[nbVillageois] = gaulois;
+		nbVillageois++;
 	}
 	
 	public Gaulois trouverVillageois(int numVillageois) {
