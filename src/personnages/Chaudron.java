@@ -1,5 +1,7 @@
 package personnages;
 
+import java.util.concurrent.BrokenBarrierException;
+
 public class Chaudron {
 	private int qtePotion;
 	private int forcePotion;
@@ -10,9 +12,7 @@ public class Chaudron {
 	}
 
 	public boolean resterPotion() {
-		if (qtePotion > 0)
-			return true;
-		return false;
+		return qtePotion > 0;
 	}
 
 	public int prendreLouche() {

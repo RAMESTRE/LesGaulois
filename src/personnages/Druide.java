@@ -3,12 +3,11 @@ package personnages;
 public class Druide {
 	private String nom;
 	private int force;
-	private Chaudron chaudron;
+	private Chaudron chaudron = new Chaudron();
 
 	public Druide(String string, int force) {
 		this.nom = string;
 		this.force = force;
-		this.chaudron = new Chaudron();
 	}
 
 	public void parler(String texte) {
@@ -24,7 +23,7 @@ public class Druide {
 		String nomGaulois = gaulois.getNom();
 
 		if (contientPotion) {
-			if (nomGaulois == "Obélix")
+			if ("Obélix".equals(nomGaulois))
 				parler("Non " + nomGaulois + " Non !... Et tu le sais très bien !");
 			else {
 				int forcePotion = chaudron.prendreLouche();

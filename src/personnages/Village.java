@@ -47,9 +47,11 @@ public class Village {
 		
 		Gaulois abraracourcix = new Gaulois("Abraracourcix", 6);
 		Village village = new Village(30, "Village des irréductibles", abraracourcix);
-		Gaulois asterix = new Gaulois("Astérix", 8);
-		Gaulois doublepolemix = new Gaulois("Doublepolémix", 3);
 		Gaulois gaulois;
+		Gaulois asterix = new Gaulois("Astérix", 8);
+		Gaulois doublepolemix = new Gaulois("Doublepolémix", 4);
+		Gaulois obelix = new Gaulois("Obélix", 25);
+		
 		
 		
 		village.ajouterVillageois(asterix);
@@ -69,6 +71,9 @@ public class Village {
 		
 		doublepolemix.setVillage(village);
 		doublepolemix.sePresenter();
+		
+		village.ajouterVillageois(obelix);
+		village.afficherVillage();
 	}
 
 }
