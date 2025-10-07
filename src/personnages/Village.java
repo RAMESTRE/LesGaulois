@@ -4,18 +4,20 @@ public class Village {
 
 	private String nom;
 	private int nbVillageois = 0;
-	private Gaulois[] chef = new Gaulois[1];
+	private Gaulois chef;
 	private Gaulois[] villageois;
 
-	public Village(final int NB_VILLAGEOIS_MAX) {
+	public Village(final int NB_VILLAGEOIS_MAX, String nom, Gaulois chef) {
 		villageois = new Gaulois[NB_VILLAGEOIS_MAX];
+		this.nom = nom;
+		this.chef = chef;
 	}
 	
 	public String getNom() {
 		return nom;
 	}
 
-	public Gaulois[] getChef() {
+	public Gaulois getChef() {
 		return chef;
 	}
 	
@@ -35,6 +37,22 @@ public class Village {
 	
 	public void afficherVillage() {
 		
+	}
+	
+	public static void main(String[] argv) {
+		
+		Gaulois abraracourcix = new Gaulois("Abraracourcix", 6);
+		Village village = new Village(30, "Village des irréductibles", abraracourcix);
+		
+		Gaulois gaulois = village.trouverVillageois(60); /*Verif Pas de levée d'exception*/
+		
+		Gaulois asterix = new Gaulois("Astérix", 8);
+		village.ajouterVillageois(asterix);
+		
+		gaulois = village.trouverVillageois(1);
+		System.out.println(gaulois.getNom());
+		gaulois = village.trouverVillageois(2);
+		System.out.println(gaulois);
 	}
 
 }
