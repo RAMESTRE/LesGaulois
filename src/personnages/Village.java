@@ -36,7 +36,11 @@ public class Village {
 	}
 	
 	public void afficherVillage() {
+		System.out.println("Dans le village \"" + getNom() + "\" du chef " + chef.getNom() + " vivent les légendaires gaulois :");
 		
+		for (int i = 0; i < nbVillageois; i++) {
+			System.out.println("- " + villageois[i].getNom());
+		}
 	}
 	
 	public static void main(String[] argv) {
@@ -53,6 +57,8 @@ public class Village {
 		System.out.println(gaulois.getNom());
 		gaulois = village.trouverVillageois(2);
 		System.out.println(gaulois);
+		
+		village.afficherVillage();
 	}
 
 }
