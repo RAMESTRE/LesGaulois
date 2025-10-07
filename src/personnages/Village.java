@@ -47,10 +47,11 @@ public class Village {
 		
 		Gaulois abraracourcix = new Gaulois("Abraracourcix", 6);
 		Village village = new Village(30, "Village des irréductibles", abraracourcix);
-		
-		Gaulois gaulois = village.trouverVillageois(60); /*Verif Pas de levée d'exception*/
-		
 		Gaulois asterix = new Gaulois("Astérix", 8);
+		Gaulois doublepolemix = new Gaulois("Doublepolémix", 3);
+		Gaulois gaulois;
+		
+		
 		village.ajouterVillageois(asterix);
 		
 		gaulois = village.trouverVillageois(1);
@@ -59,6 +60,15 @@ public class Village {
 		System.out.println(gaulois);
 		
 		village.afficherVillage();
+		
+		abraracourcix.setVillage(village);
+		abraracourcix.sePresenter();
+		
+		asterix.setVillage(village);
+		asterix.sePresenter();
+		
+		doublepolemix.setVillage(village);
+		doublepolemix.sePresenter();
 	}
 
 }

@@ -1,11 +1,11 @@
 package personnages;
 
 public class Gaulois {
-	
+
 	private String nom;
 	private int force;
 	private int effetPotion;
-	private Village[] village = new Village[1];
+	private Village village;
 
 	public Gaulois(String nom, int force) {
 		this.nom = nom;
@@ -25,6 +25,10 @@ public class Gaulois {
 		return "Le gaulois " + nom + " : ";
 	}
 
+	public void setVillage(Village village) {
+		this.village = village;
+	}
+
 	@Override
 	public String toString() {
 		return "Gaulois [nom=" + nom + ", force=" + force + "]";
@@ -39,6 +43,27 @@ public class Gaulois {
 
 	public void boirePotion(int forcePotion) {
 		this.effetPotion = forcePotion;
+	}
+
+	public void sePresenter() {
+		if (this == village.getChef())
+			System.out.println("Le gaulois " + this.getNom() + " : \"Bonjour, je m'appelle " + this.getNom()
+					+ ". Je suis le chef du village " + village.getNom() + ".\"");
+
+		int i = 1;
+		while (village.trouverVillageois(i) != null) {
+			if (this == village.trouverVillageois(i)) {
+				System.out.println("Le gaulois " + this.getNom() + " : \"Bonjour, je m'appelle " + this.getNom()
+						+ ". J'habite le village " + village.getNom() + ".\"");
+				break;
+			}
+			i++;
+		}
+
+		if (village.trouverVillageois(i) == null)
+			System.out.println("Le gaulois " + this.getNom() + " : \"Bonjour, je m'appelle " + this.getNom()
+					+ ". Je voyage de village en village " + village.getNom() + ".\"");
+
 	}
 
 	public static void main(String[] argv) {
