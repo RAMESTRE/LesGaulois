@@ -7,6 +7,7 @@ public class Romain {
 	public Romain(String nom, int force) {
 		this.nom = nom;
 		this.force = force;
+		assert isInvariantVerified();
 	}
 
 	public String getNom() {
@@ -22,15 +23,26 @@ public class Romain {
 	}
 
 	public void recevoirCoup(int forceCoup) {
+		assert isPreconditionVerified(forceCoup);
+		int oldForce = this.force;
 		this.force -= forceCoup;
 		if (this.force < 1)
 			parler("J'abandonne");
 		else
 			parler("Aïe");
+		assert isPostConditionVerified(oldForce);
 	}
 
 	private boolean isInvariantVerified() {
-		return this.force > 0;
+		return this.force >= 0;
+	}
+	
+	private boolean isPreconditionVerified(int forceCoup) {
+		return forceCoup >= 0;
+	}
+	
+	private boolean isPostConditionVerified(int oldForce) {
+		return oldForce > this.force;
 	}
 
 	public static void main(String[] argv) {
